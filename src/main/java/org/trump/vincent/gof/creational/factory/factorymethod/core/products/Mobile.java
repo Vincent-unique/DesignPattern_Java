@@ -1,4 +1,4 @@
-package org.trump.vincent.gof.creational.factory.factorymethod.products;
+package org.trump.vincent.gof.creational.factory.factorymethod.core.products;
 
 import org.trump.vincent.gof.creational.factory.factorymethod.AbstractProduct;
 

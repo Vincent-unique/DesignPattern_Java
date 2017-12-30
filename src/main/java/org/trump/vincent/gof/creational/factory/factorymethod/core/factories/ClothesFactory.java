@@ -1,12 +1,15 @@
-package org.trump.vincent.gof.creational.factory.factorymethod.factories;
+package org.trump.vincent.gof.creational.factory.factorymethod.core.factories;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.trump.vincent.gof.creational.factory.factorymethod.AbstractProduct;
 import org.trump.vincent.gof.creational.factory.factorymethod.Creator;
 
 /**
- * Created by Administrator on 2017/5/23 0023.
+ * Created by Vincent on 2017/5/23 0023.
  */
 public class ClothesFactory extends Creator {
+    private Logger logger = LoggerFactory.getLogger(getClass());
     public <T extends AbstractProduct> T factory(Class<T> productClass){
         T product = null;
         String productName = productClass.getName();

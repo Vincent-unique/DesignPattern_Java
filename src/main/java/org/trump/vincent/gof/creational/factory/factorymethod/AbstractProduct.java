@@ -4,7 +4,7 @@ import org.trump.vincent.gof.creational.factory.factorymethod.exceptions.Invalid
 import org.trump.vincent.util.LoggerUtil;
 
 /**
- * Created by Administrator on 2017/5/22 0022.
+ * Created by Vincent on 2017/5/22 0022.
  */
 public abstract class AbstractProduct extends LoggerUtil {
     public String getVendor() {
