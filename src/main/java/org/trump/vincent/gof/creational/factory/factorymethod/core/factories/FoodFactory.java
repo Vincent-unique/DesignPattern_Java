@@ -1,5 +1,7 @@
 package org.trump.vincent.gof.creational.factory.factorymethod.core.factories;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.trump.vincent.gof.creational.factory.factorymethod.AbstractProduct;
 import org.trump.vincent.gof.creational.factory.factorymethod.Creator;
 
@@ -7,6 +9,8 @@ import org.trump.vincent.gof.creational.factory.factorymethod.Creator;
  * Created by liwei on 2017/5/23 0023.
  */
 public class FoodFactory extends Creator {
+    Logger logger = LoggerFactory.getLogger(getClass());
+
     public <T extends AbstractProduct> T factory(Class<T> productClass){
          T product = null;
          try{

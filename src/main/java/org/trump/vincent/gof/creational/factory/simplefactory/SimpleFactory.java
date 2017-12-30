@@ -1,5 +1,7 @@
 package org.trump.vincent.gof.creational.factory.simplefactory;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.trump.vincent.gof.creational.factory.simplefactory.products.Strawberry;
 import org.trump.vincent.util.LoggerUtil;
 import org.trump.vincent.gof.creational.factory.simplefactory.exceptions.BadProductException;
@@ -18,6 +20,8 @@ public class SimpleFactory extends LoggerUtil {
      * 产出工厂遵循单例设计模式
      */
     public static SimpleFactory factory;
+    Logger logger = LoggerFactory.getLogger(getClass());
+
     private SimpleFactory(){
         logger.debug("Construct SimpleFactory instance in Simple Pattern.");
     }

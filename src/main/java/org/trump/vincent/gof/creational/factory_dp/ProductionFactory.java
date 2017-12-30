@@ -2,11 +2,12 @@ package org.trump.vincent.gof.creational.factory_dp;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.trump.vincent.gof.creational.factory_dp.IProductions.IBMBook;
 
 public class ProductionFactory {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
-    public <T extends Production> Production factory(Class<T> tClass){
+    public Production factory(Class<? extends Production> tClass){
 
         if(tClass==null){
             throw new NullPointerException("Null Production Class.");
@@ -30,5 +31,12 @@ public class ProductionFactory {
             e.printStackTrace();
         }
         return factory(productionClass);
+    }
+
+
+    public static void main(String[] args) {
+        Production ibmBook = new ProductionFactory().factory(IBMBook.class);
+
+        System.out.println(ibmBook.getProductionName());
     }
 }
