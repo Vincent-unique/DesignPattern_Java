@@ -21,6 +21,8 @@ public class TargetAdapter implements ITarget {
          *
          * TODO
          */
+        source.originWork();
+        //TODO
     }
 
     public String propsInfo() {

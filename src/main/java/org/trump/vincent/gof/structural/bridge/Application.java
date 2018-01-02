@@ -1,5 +1,9 @@
 package org.trump.vincent.gof.structural.bridge;
 
+import org.trump.vincent.gof.structural.bridge.bridges.operation.Operation;
+import org.trump.vincent.gof.structural.bridge.bridges.operation.impl.OperationImpl1;
+import org.trump.vincent.gof.structural.bridge.bridges.operation.impl.OperationImpl2;
+
 public class Application {
 
     public static void main(String[] args) {
