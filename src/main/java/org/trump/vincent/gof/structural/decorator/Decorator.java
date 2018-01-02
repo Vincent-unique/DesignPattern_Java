@@ -13,8 +13,8 @@ public class Decorator implements Origin {
         System.out.println(this.info);
     }
 
-    public void work() {
+    public void function() {
         this.before();
-        origin.work();
+        origin.function();
     }
 }

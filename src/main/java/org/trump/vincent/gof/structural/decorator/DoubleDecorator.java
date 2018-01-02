@@ -2,22 +2,22 @@ package org.trump.vincent.gof.structural.decorator;
 
 public class DoubleDecorator extends Decorator {
 
-    private Origin origin;
+    protected Origin decorator;
 
-    private String vendor;
+    protected String vendor;
 
-    public DoubleDecorator(Origin origin){
-        super(origin);
+    public DoubleDecorator(Origin decorator){
+        super(decorator);
         this.vendor = "Apple";
     }
 
-    public void showVD(){
+    protected void showVD(){
         System.out.println(this.vendor);
     }
 
     @Override
-    public void work(){
+    public void function(){
         this.showVD();
-        super.work();
+        super.function();
     }
 }
