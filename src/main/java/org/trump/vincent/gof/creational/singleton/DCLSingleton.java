@@ -4,7 +4,7 @@ public class DCLSingleton {
     private static volatile DCLSingleton instance;
 
     private DCLSingleton(){
-
+        //TODO
     }
 
     public static DCLSingleton getInstance() {

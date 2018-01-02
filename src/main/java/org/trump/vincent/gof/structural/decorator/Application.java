@@ -6,9 +6,9 @@ public class Application {
         Origin origin = new OriginImpl();
 
         Origin decorator = new Decorator(origin);
-        decorator.work();
+        decorator.function();
 
         Origin doubleDecorator = new DoubleDecorator(decorator);
-        doubleDecorator.work();
+        doubleDecorator.function();
     }
 }

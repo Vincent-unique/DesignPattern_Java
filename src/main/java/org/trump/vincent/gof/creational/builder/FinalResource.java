@@ -8,7 +8,7 @@ package org.trump.vincent.gof.creational.builder;
  * GOF- Builder Design pattern
  * @Reference http://www.jianshu.com/p/e2a2fe3555b9
  */
-public class PlumpResource {
+public class FinalResource {
 
     private String resourceId;
 
@@ -30,7 +30,7 @@ public class PlumpResource {
      * Private Constuctor for the Plump Resource with Builder Design pattern.
      * @param resourceBuilder
      */
-    private PlumpResource(ResourceBuilder resourceBuilder){
+    private FinalResource(ResourceBuilder resourceBuilder){
         this.resourceId = resourceBuilder.resourceId;
         this.name = resourceBuilder.name;
         this.ccid = resourceBuilder.ccid;
@@ -48,8 +48,8 @@ public class PlumpResource {
 
         }
 
-        public PlumpResource build(){
-            return new PlumpResource(this);
+        public FinalResource build(){
+            return new FinalResource(this);
         }
 
         public ResourceBuilder setResourceId(String resourceId) {
@@ -93,7 +93,7 @@ public class PlumpResource {
         }
 
         /**
-         * Same properties with builer target (PlumpResource)
+         * Same properties with builer target (FinalResource)
          */
         private String resourceId;
 

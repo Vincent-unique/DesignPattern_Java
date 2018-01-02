@@ -8,5 +8,6 @@ public class Application {
     public static void main(String[] args) {
         AbstractFactory pcFactory = FactoryCreator.buildFactory(PCFactory.class);
         IBMPC ibmpc = (IBMPC) pcFactory.factory("IBMPC");
+        System.out.println(ibmpc.getName());
     }
 }

@@ -8,8 +8,8 @@ import java.util.UUID;
 public class BuilderApp {
 
 
-    public PlumpResource provideResource(){
-        PlumpResource.ResourceBuilder builder = new PlumpResource.ResourceBuilder();
+    public FinalResource provideResource(){
+        FinalResource.ResourceBuilder builder = new FinalResource.ResourceBuilder();
         builder.setResourceId(UUID.randomUUID().toString())
                 .setName("hehe")
                 .setCcid("solo")
