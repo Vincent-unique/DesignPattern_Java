@@ -6,7 +6,7 @@ import org.trump.vincent.gof.structural.proxy.dynamic.SubjectImpl2;
 
 import java.lang.reflect.Proxy;
 
-public class Application {
+public class JDKApplication {
 
     public static void main(String[] args) {
 
