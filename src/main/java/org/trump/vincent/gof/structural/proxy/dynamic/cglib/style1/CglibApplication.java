@@ -1,4 +1,4 @@
-package org.trump.vincent.gof.structural.proxy.dynamic.cglib;
+package org.trump.vincent.gof.structural.proxy.dynamic.cglib.style1;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
