@@ -8,6 +8,7 @@ public class DoubleDecorator extends Decorator {
 
     public DoubleDecorator(Origin decorator){
         super(decorator);
+        this.info = "Decorate twice.";
         this.vendor = "Apple";
     }
 

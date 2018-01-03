@@ -3,7 +3,7 @@ package org.trump.vincent.gof.structural.decorator;
 public class Decorator implements Origin {
     private Origin origin;
 
-    private String info;
+    protected String info;
 
     public Decorator(Origin origin){
         this.origin = origin;

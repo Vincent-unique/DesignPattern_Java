@@ -9,6 +9,7 @@ public class TripleDecorator extends DoubleDecorator {
 
     public TripleDecorator(Origin doubleDecorator){
         super(doubleDecorator);
+        this.info = "Decorate triple";
         this.toCountry = "China";
     }
 
