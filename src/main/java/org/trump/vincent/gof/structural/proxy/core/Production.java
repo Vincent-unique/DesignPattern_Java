@@ -1,4 +1,4 @@
-package org.trump.vincent.gof.structural.proxy;
+package org.trump.vincent.gof.structural.proxy.core;
 
 public interface Production {
 

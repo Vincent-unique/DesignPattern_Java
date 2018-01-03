@@ -1,4 +1,4 @@
-package org.trump.vincent.gof.structural.proxy;
+package org.trump.vincent.gof.structural.proxy.core;
 
 public class ProductionProxy implements Production{
 
@@ -11,7 +11,7 @@ public class ProductionProxy implements Production{
 
     public String getProductionInfo(){
         return this.production==null?
-                "" : this.production.getProductionInfo();
+                null : this.production.getProductionInfo();
     }
 
     public void toMarket(){
