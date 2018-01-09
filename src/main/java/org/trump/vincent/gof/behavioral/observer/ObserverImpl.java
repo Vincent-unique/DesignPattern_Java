@@ -17,6 +17,15 @@ public class ObserverImpl<E> implements Observer{
          */
     }
 
+    /**
+     * Main worker for this Observer
+     */
+    public void woke(){
+
+        //TODO
+
+    }
+
     public void subscribe(Subject subject) {
         if (subject!=null) {
             this.subject = subject;
