@@ -14,12 +14,14 @@ public class ConcreteSubject<E> extends Subject<E> {
             for (Observer observer : this.observers){
                 observer.update();
             }
+            this.changed = false;
         }
     }
 
     @Override
     public void publish(E message) {
         this.message = message;
+        this.changed = true;
         notifyObservers();
     }
 

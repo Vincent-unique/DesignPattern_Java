@@ -12,11 +12,13 @@ public abstract class Subject<E>{
 
     List<Observer> observers;
 
+    protected boolean changed = false;
+
     public Subject(List<Observer> observers){
         this.observers = observers;
     }
 
-    public int addObserver(Observer ...observers){
+    public int register(Observer ...observers){
         if(observers!=null&&observers.length>0){
             if(this.observers==null){
                 this.observers = new ArrayList<Observer>();
@@ -27,7 +29,7 @@ public abstract class Subject<E>{
         return 0;
     }
 
-    public int removeObserver(Observer observer){
+    public int unRegister(Observer observer){
         if(observer!=null){
             if(this.observers!=null){
                 int index = this.observers.indexOf(observer);

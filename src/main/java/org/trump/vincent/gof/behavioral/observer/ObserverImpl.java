@@ -12,18 +12,21 @@ public class ObserverImpl<E> implements Observer{
 
     public void update(){
         this.data = subject.getMessage();
+        /**
+         * TODO
+         */
     }
 
     public void subscribe(Subject subject) {
         if (subject!=null) {
             this.subject = subject;
-            this.subject.addObserver(this);
+            this.subject.register(this);
         }
     }
 
     public void unSubscribe() {
         if(this.subject!=null){
-            this.subject.removeObserver(this);
+            this.subject.unRegister(this);
             this.subject = null;
         }
     }
