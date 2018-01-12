@@ -36,7 +36,7 @@
     2、修改表的存储引擎：
         ALTER TABLE tablename ENGINE = engine_name;
         例：
-        alter table temp engine = memory;
+        alter table temp_table engine = memory;
         
     二、创建索引
     1、create table 时 添加索引 （PRIMARY KEY 与 UNIQUE 可直接在列后加）
