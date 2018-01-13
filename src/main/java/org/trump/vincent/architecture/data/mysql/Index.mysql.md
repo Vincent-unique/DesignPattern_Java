@@ -38,6 +38,17 @@
         例：
         alter table temp_table engine = memory;
         
+        
+     3、查看当前表的存储引擎
+     SHOW TABLE STATUS FROM db_name WHERE NAME = table_name;
+     例：
+        show table status from db_test where name = 'temp_table';
+        
+     Notice :
+     SHOW CREATE TABLE table_name 语法查看的 engine 可能有误；
+     即，“ show-create-table"语法是查看最初创建该表的DDL真实语义（被保存某张表中）；
+     当期间通过 ALTER修改了ENGINE时，该语法查看到的依然是最初的ENGINE。
+        
     二、创建索引
     1、create table 时 添加索引 （PRIMARY KEY 与 UNIQUE 可直接在列后加）
     
