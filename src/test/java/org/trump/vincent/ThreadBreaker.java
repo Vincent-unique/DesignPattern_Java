@@ -14,7 +14,11 @@ public class ThreadBreaker {
             while (true){
                 counter.getAndIncrement();
                 if(counter.getAndIncrement()>10){
-                    throw new RuntimeException("Thread Runtime Breaker.");
+                    try {
+                        throw new RuntimeException("Thread Runtime Breaker.");
+                    }catch (Throwable e){
+                        e.printStackTrace();
+                    }
                 }
                 System.out.println("Health.");
                 try {
@@ -32,10 +36,10 @@ public class ThreadBreaker {
         try {
             TimeUnit.SECONDS.sleep(8);
             System.out.println("Handle is alive:\t" + thread.isAlive());
-            if(!thread.isAlive()){
+           /* if(!thread.isAlive()){
                 thread = new Thread(new Handler(),"Handle");
                 thread.start();
-            }
+            }*/
         }catch (InterruptedException e){
             e.printStackTrace();
         }
