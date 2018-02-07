@@ -54,7 +54,7 @@
     
     2、alter table tablename add UNIQUE indexname ( index_columns );
     
-    alter table tablename add INDEX indexname (
+    alter table tablename add INDEX indexname ( index_columns )
      
     3、create UNIQUE/ INDEX/ FULLTEXT/ SPATIAL indexname on tablename ( index_columns); 
     
