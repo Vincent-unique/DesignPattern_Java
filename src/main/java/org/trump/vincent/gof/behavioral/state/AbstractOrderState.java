@@ -1,6 +1,8 @@
 package org.trump.vincent.gof.behavioral.state;
 
-import org.trump.vincent.gof.behavioral.state.context.OrderContext;
+import org.apache.tools.ant.taskdefs.condition.Or;
+import org.trump.vincent.gof.behavioral.state.bo.Order;
+import org.trump.vincent.gof.behavioral.state.context.StateContext;
 
 import java.io.IOException;
 
@@ -9,7 +11,7 @@ import java.io.IOException;
  * User: vincent
  * Date: 2018/11/26
  **/
-public abstract class AbstractOrderState implements IState<OrderStateEnum, OrderContext>{
+public abstract class AbstractOrderState implements IState<OrderStateEnum, StateContext>{
     private OrderStateEnum state;
 
     public OrderStateEnum getState() {
@@ -21,7 +23,7 @@ public abstract class AbstractOrderState implements IState<OrderStateEnum, Order
      * @param order
      * @return
      */
-    public boolean statePersist(OrderContext order) {
+    public boolean statePersist(Order order) {
 
 //        try {
 //            //TODO Order状态变更持久化
@@ -32,28 +34,28 @@ public abstract class AbstractOrderState implements IState<OrderStateEnum, Order
         return true;
     }
 
-    public ActionResponse newOrder(OrderContext order) {
+    public ActionResponse newOrder(Order order) {
         return new ActionResponse(){{
             setCode(-1);
             setError("当前不允许创建新订单");
         }};
     }
 
-    public ActionResponse orderPay(OrderContext order) {
+    public ActionResponse orderPay(Order order) {
         return new ActionResponse(){{
             setCode(-1);
             setError("当前状态不允许支付");
         }};
     }
 
-    public ActionResponse refund(OrderContext order) {
+    public ActionResponse refund(Order order) {
         return new ActionResponse(){{
             setCode(-1);
             setError("当前状态不允许退款");
         }};
     }
 
-    public ActionResponse actionX(OrderContext order){
+    public ActionResponse actionX(Order order){
         return new ActionResponse(){{
             setCode(-1);
             setError("当前状态不允许X..");

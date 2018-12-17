@@ -1,9 +1,10 @@
 package org.trump.vincent.gof.behavioral.state.states;
 
 import lombok.Data;
+import org.trump.vincent.gof.behavioral.state.AbstractOrderState;
 import org.trump.vincent.gof.behavioral.state.ActionResponse;
 import org.trump.vincent.gof.behavioral.state.OrderStateEnum;
-import org.trump.vincent.gof.behavioral.state.context.OrderContext;
+import org.trump.vincent.gof.behavioral.state.bo.Order;
 
 /**
  * Description:
@@ -12,14 +13,14 @@ import org.trump.vincent.gof.behavioral.state.context.OrderContext;
  **/
 
 @Data
-public class PaidFailure {
+public class PaidFailure extends AbstractOrderState {
 
     private OrderStateEnum state = OrderStateEnum.PAID_FAILURE;
 
     private String modTime; // 状态变更时间
 
 
-    public ActionResponse refund(OrderContext order) {
+    public ActionResponse refund(Order order) {
 
         // TODO  订单申请退款逻辑
 

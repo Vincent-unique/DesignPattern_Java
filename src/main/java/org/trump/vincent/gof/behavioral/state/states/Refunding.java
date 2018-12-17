@@ -1,6 +1,7 @@
 package org.trump.vincent.gof.behavioral.state.states;
 
 import lombok.Data;
+import org.trump.vincent.gof.behavioral.state.AbstractOrderState;
 import org.trump.vincent.gof.behavioral.state.OrderStateEnum;
 
 /**
@@ -10,7 +11,7 @@ import org.trump.vincent.gof.behavioral.state.OrderStateEnum;
  **/
 
 @Data
-public class Refunding {
+public class Refunding extends AbstractOrderState {
 
     private OrderStateEnum state = OrderStateEnum.REFUNDING;
 

@@ -1,4 +1,4 @@
-package org.trump.vincent.gof.behavioral.state.context;
+package org.trump.vincent.gof.behavioral.state.bo;
 
 import lombok.Data;
 import org.trump.vincent.gof.behavioral.state.AbstractOrderState;
@@ -14,7 +14,7 @@ import org.trump.vincent.gof.behavioral.state.bo.ShopType;
  **/
 
 @Data
-public class OrderContext implements Context {
+public class Order {
 
     private Long orderId;   // 订单ID
 

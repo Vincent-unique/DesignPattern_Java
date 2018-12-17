@@ -4,7 +4,7 @@ import lombok.Data;
 import org.trump.vincent.gof.behavioral.state.AbstractOrderState;
 import org.trump.vincent.gof.behavioral.state.ActionResponse;
 import org.trump.vincent.gof.behavioral.state.OrderStateEnum;
-import org.trump.vincent.gof.behavioral.state.context.OrderContext;
+import org.trump.vincent.gof.behavioral.state.bo.Order;
 
 /**
  * Description: 订单待支付
@@ -20,7 +20,7 @@ public class WaitPay extends AbstractOrderState {
     private String modTime; // 状态变更时间
 
     @Override
-    public ActionResponse orderPay(OrderContext order) {
+    public ActionResponse orderPay(Order order) {
 
         /**
          * 订单支付逻辑

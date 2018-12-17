@@ -11,5 +11,4 @@ public interface IState<T, M extends Context> {
 
     T getState();
 
-    boolean statePersist(M context);
 }
